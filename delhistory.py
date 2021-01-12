@@ -9,8 +9,8 @@ def get_button(driver):
     return driver.find_element_by_css_selector('* /deep/ #clearBrowsingDataConfirm')
 
 def clear_cache(driver, timeout=60):
-    driver.get('brave://settings/clearBrowserData')
-    options.binary_location = '/Applications/Brave Browser.app/Contents/MacOS/Brave Browser'
+    driver.get('chrome://settings/clearBrowserData')
+    options.binary_location = '/Applications/Google Chrome.app'
 
     wait = WebDriverWait(driver, timeout)
     wait.until(get_button)
